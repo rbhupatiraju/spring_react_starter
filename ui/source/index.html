@@ -46,8 +46,8 @@
             if (version !== '') {
                 addAssets(contextPath, version)
                 window.onload = function() {
-                    addCss('/'+context+'/css/app_'+version+'.css')
-                    addScript('/'+context+'/js/app_'+version+'.bundle.js')
+                    addCss('/'+contextPath+'/css/app_'+version+'.css')
+                    addScript('/'+contextPath+'/js/app_'+version+'.bundle.js')
                 }
             }
         </script>

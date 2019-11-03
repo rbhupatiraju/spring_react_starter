@@ -1,23 +1,12 @@
-import React from 'react'
-import { render } from 'react-dom'
-import App from './app/App'
-import { DragDropContext } from 'react-dnd'
-import HTML5Backend from 'react-dnd-html5-backend'
-import { AppContainer } from 'react-hot-loader'
-import './app.less'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-const rootElement = document.getElementById('app')
-const AppContainerDND = DragDropContext(HTML5Backend)(AppContainer)
-const ctx = window.contextPath;
+ReactDOM.render(<App />, document.getElementById('app'));
 
-render(<AppContainerDND><App contextPath={ctx} /></AppContainerDND>, rootElement)
-
-if (module.hot) {
-    module.hot.accept('./app/App', () => {
-        const NewRoot = require('./app/App').default
-        render(
-            render(<AppContainerDND><NewRoot contextPath={ctx} /></AppContainerDND>,
-            rootElement)
-        )
-    })
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
