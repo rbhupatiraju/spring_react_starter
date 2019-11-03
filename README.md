@@ -8,6 +8,9 @@ cd ui
 yarn start
 ```
 
+Access the application using http://localhost:8000/rest/
+
+
 **To run in production mode**
 
 ```shell
@@ -17,3 +20,4 @@ cd ..
 mvn package
 java -jar spring_react_starter-0.0.1-SNAPSHOT.jar
 ```
+Access the application using http://localhost:8080/rest/
