@@ -36,34 +36,7 @@ class HomePage extends Component {
         <CssBaseline />
         <AppMenu />
         <div className={classes.root}>
-            <Grid container spacing={24} style={{ marginTop: '2%', marginBottom: '2%', marginRight: '2%', marginLeft: '2%' }}>
-                <Grid item xs={2} sm={2}>
-                    <Paper className={classes.paper}>
-                        <Typography variant="h5" component="h3">
-                            Create a Job
-                        </Typography>
-                        <Typography component="p">
-                            This module is used to create calc engine jobs.<br/>
-                        </Typography>
-                        <Typography component="p">
-                            <a href="#/createJob">Get Started</a>
-                        </Typography>
-                    </Paper>
-                </Grid>
-                <Grid item xs={3} sm={3}>
-                    <Paper className={classes.paper}>
-                        <Typography variant="h5" component="h3">
-                            Calc Engine Job List
-                        </Typography>
-                        <Typography component="p">
-                            This module is used to view/trigger the calc engine jobs already created.
-                        </Typography>
-                        <Typography component="p">
-                            <a href="#/jobList">View/Trigger Calc Engine Job</a>
-                        </Typography>
-                    </Paper>
-                </Grid>
-            </Grid>
+            Hello World
         </div>
         </React.Fragment>);
     }

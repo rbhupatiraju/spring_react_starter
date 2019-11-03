@@ -13,6 +13,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import { APP_NAME } from '../constants'
 
 const logo = require('../images/logo.svg');
 
@@ -20,10 +21,6 @@ const Menu = [
     {
       label: "Home",
       pathname: "/"
-    },
-    {
-      label: "Calc Engine",
-      pathname: "/calcEngineWizard"
     }
 ];
 
@@ -61,7 +58,7 @@ const styles = theme => ({
   },
   tagline: {
     display: 'inline-block',
-    marginLeft: 10,
+    marginLeft: 5,
     [theme.breakpoints.up('md')]: {
       paddingTop: '0.8em'
     }
@@ -115,19 +112,6 @@ class AppMenu extends Component {
     if(this.props.currentPath === '/home') {
       return 0
     }
-    if(this.props.currentPath === '/calcEngineWizard') {
-      return 1
-    }
-    if(this.props.currentPath === '/ewiWizard') {
-      return 2
-    }
-    if(this.props.currentPath === '/dqWizard') {
-      return 3
-    }
-    if(this.props.currentPath === '/reconWizard') {
-      return 4
-    }
-
   }
 
   render() {
@@ -142,8 +126,7 @@ class AppMenu extends Component {
                   <div className={classes.inline}>
                     <Typography variant="h6" color="inherit" noWrap>
                       <Link to='/' className={classes.link}>
-                        <img width={20} src={logo} alt="" />
-                        <span className={classes.tagline}>RDAR</span>
+                        <span className={classes.tagline}>{APP_NAME}</span>
                       </Link>
                     </Typography>
                   </div>
